@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
 This is a testing script to make sure I have the
 ability to capture video of my agent's performance.
