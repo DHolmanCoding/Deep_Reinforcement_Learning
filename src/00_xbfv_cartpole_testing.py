@@ -8,7 +8,7 @@ make sure you have the correct dependencies:
 sudo apt install ffmpeg xvfb
 
 run the following command from the command line:
-xvfb-run -s "-screen 0 640x480x24" python3 xbfv_cartpole_testing.py
+xvfb-run -s "-screen 0 640x480x24" python3 00_xbfv_cartpole_testing.py
 """
 
 import gym
