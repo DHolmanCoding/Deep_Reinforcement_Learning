@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
 
-"""
-
-"""
-
 import random
 import gym
 import gym.spaces
@@ -92,17 +88,17 @@ def filter_batch(batch, percentile):
     return elite_batch, train_obs, train_act, reward_bound
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     random.seed(12345)
-    env = DiscreteOneHotWrapper(gym.make("FrozenLake-v0"))
-    env = gym.wrappers.Monitor(env, directory="mon", force=True)
+    env = DiscreteOneHotWrapper(gym.make('FrozenLake-v0'))
+    env = gym.wrappers.Monitor(env, directory='mon', force=True)
     obs_size = env.observation_space.shape[0]
     n_actions = env.action_space.n
 
     net = Net(obs_size, HIDDEN_SIZE, n_actions)
     objective = nn.CrossEntropyLoss()
     optimizer = optim.Adam(params=net.parameters(), lr=0.001)
-    writer = SummaryWriter(comment="-frozenlake-tweaked")
+    writer = SummaryWriter(comment='-frozenlake-tweaked')
 
     full_batch = []
     for iter_no, batch in enumerate(iterate_batches(env, net, BATCH_SIZE)):
@@ -119,13 +115,13 @@ if __name__ == "__main__":
         loss_v = objective(action_scores_v, acts_v)
         loss_v.backward()
         optimizer.step()
-        print("%d: loss=%.3f, reward_mean=%.3f, reward_bound=%.3f, batch=%d" % (
+        print('%d: loss=%.3f, reward_mean=%.3f, reward_bound=%.3f, batch=%d' % (
             iter_no, loss_v.item(), reward_mean, reward_bound, len(full_batch)))
-        writer.add_scalar("loss", loss_v.item(), iter_no)
-        writer.add_scalar("reward_mean", reward_mean, iter_no)
-        writer.add_scalar("reward_bound", reward_bound, iter_no)
+        writer.add_scalar('loss', loss_v.item(), iter_no)
+        writer.add_scalar('reward_mean', reward_mean, iter_no)
+        writer.add_scalar('reward_bound', reward_bound, iter_no)
         if reward_mean > 0.8:
-            print("Solved!")
+            print('Solved!')
             break
 
     writer.close()
