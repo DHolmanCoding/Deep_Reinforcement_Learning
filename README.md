@@ -10,4 +10,6 @@ Working through and expanding upon examples from 'Deep Reinforcement Learning Ha
 
 * 03_frozen_lake_entropy: Navigating a slippery maze using cross-entropy.
 
-* 04_frozen_lake_value_iteration: Navigating the slippert lake with value iteration.
+* 04_frozen_lake_value_iteration: Navigating the slippery lake with value iteration.
+
+* 05_frozen_lake_q_learning: Navigating the slippery lake with q learning.
