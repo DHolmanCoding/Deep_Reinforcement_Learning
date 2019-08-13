@@ -4,10 +4,10 @@ Working through and expanding upon examples from 'Deep Reinforcement Learning Ha
 
 * 00_xbvf_cartpole_testing: Script to test video recording of agent's behavior.
 
-* 01_Atari_image_GAN: Generator learn how to create authentic Atari screenshots in ~50,000 iterations
+* 01_Atari_image_GAN: Generator learn how to create authentic Atari screenshots in ~50,000 iterations.
 
-* 02_cartpole_cross_entropy: Uses crossentropy RL method to teach the agent to balance a pole
+* 02_cartpole_cross_entropy: Uses crossentropy RL method to teach the agent to balance a pole.
 
-* 03_frozen_lake_entropy: Navigating a slippery maze using cross-entropy
+* 03_frozen_lake_entropy: Navigating a slippery maze using cross-entropy.
 
-* 
+* 04_frozen_lake_value_iteration: Navigating the slippert lake with value iteration.
