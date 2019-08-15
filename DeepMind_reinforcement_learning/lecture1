@@ -1,0 +1,30 @@
+Trend:
+automated physical solutions
+automated static cognitive solutions
+automated dynamic cognitive solutions
+
+agent observes env
+agent performs action
+
+Why learn?
+1. find a previously unknown solution to a problem
+e.g. find a solution for a sequential problem for which you have (or can generate) data
+2. find solutions to problems online
+e.g. prepare to solve a problem whose nature you have not directly prepared for
+
+RL: is the science of learning how to make decisions from interactions
+(sequential decision making problems)
+There is no supervision, only a reward signal
+
+core concepts of RL:
+- Environment
+- Reward (must be external to the learning algorithm)
+- Agent
+    Agent state
+    Policy
+    Value function (probably)
+    Model (optionally)
+
+Agent State (S_t) contains history which is a sequence of observations, actions, and rewards.
+Environment State (O_t)
+If O_t = S_t, then the agent is in an MDP
