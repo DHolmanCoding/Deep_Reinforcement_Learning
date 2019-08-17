@@ -20,10 +20,10 @@ core concepts of RL:
 - Environment
 - Reward (must be external to the learning algorithm)
 - Agent
-    Agent state
-    Policy
-    Value function (probably)
-    Model (optionally)
+    - Agent state
+    - Policy
+    - Value function (probably)
+    - Model (optionally)
 
 Agent State (S_t) contains history which is a sequence of observations, actions, and rewards.
 Environment State (O_t)
